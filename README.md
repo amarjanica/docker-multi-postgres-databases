@@ -8,3 +8,6 @@ cp .env.example .env
 docker compose up
 ```
 
+
+[![](https://markdown-videos.deta.dev/youtube/UVBrRKgnJB4)](https://youtu.be/UVBrRKgnJB4)
+
