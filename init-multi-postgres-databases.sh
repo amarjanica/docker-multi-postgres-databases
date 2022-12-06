@@ -17,11 +17,11 @@ EOSQL
 }
 
 
-# POSTGRES_MULTIBLE_DATABASES=db1,db2
-# POSTGRES_MULTIBLE_DATABASES=db1:password,db2
-if [ -n "$POSTGRES_MULTIBLE_DATABASES" ]; then
-  echo "Multiple database creation requested: $POSTGRES_MULTIBLE_DATABASES"
-  for db in $(echo $POSTGRES_MULTIBLE_DATABASES | tr ',' ' '); do
+# POSTGRES_MULTIPLE_DATABASES=db1,db2
+# POSTGRES_MULTIPLE_DATABASES=db1:password,db2
+if [ -n "$POSTGRES_MULTIPLE_DATABASES" ]; then
+  echo "Multiple database creation requested: $POSTGRES_MULTIPLE_DATABASES"
+  for db in $(echo $POSTGRES_MULTIPLE_DATABASES | tr ',' ' '); do
     user=$(echo $db | awk -F":" '{print $1}')
     pswd=$(echo $db | awk -F":" '{print $2}')
     if [[ -z "$pswd" ]]
